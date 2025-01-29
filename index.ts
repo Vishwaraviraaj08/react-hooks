@@ -8,3 +8,9 @@ export {useFetch} from "./src/useFetch";
 export {useFetchParallel} from "./src/useFetchParallel";
 export {useUndoRedo} from "./src/useUndoRedo";
 export {useVirtualList} from "./src/useVirtualList";
+export {useGetRequest} from "./src/useGetRequest"
+export {usePostRequest} from "./src/usePostRequest"
+export {usePutRequest} from "./src/usePutRequest"
+export {useDeleteRequest} from "./src/useDeleteRequest"
+export {useTrigger} from "./src/useTrigger"
+export {useSharedState} from "./src/useSharedState"
