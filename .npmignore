@@ -1,0 +1,12 @@
+# Exclude test and source code files from npm package
+/src
+/node_modules
+/.git
+/tsconfig.json
+/.eslintrc.js
+/.prettierrc
+/.gitignore
+/package.json
+/package-lock.json
+/rollup.config.js
+/README.md
