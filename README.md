@@ -24,7 +24,7 @@ yarn add @vishwaraviraaj/react-hooks
 Efficiently renders large lists by virtualizing the elements.
 
 ```tsx
-const { visibleItems, containerRef } = useVirtualList(items, itemHeight);
+const { visibleItems, containerRef } = useVirtualList(items, itemHeight, containerHeight);
 ```
 
 ---
@@ -33,7 +33,7 @@ const { visibleItems, containerRef } = useVirtualList(items, itemHeight);
 Fetch multiple APIs in parallel and manage loading/error states.
 
 ```tsx
-const { data, loading, error } = useFetchParallel([url1, url2]);
+const { data, loading, error } = useFetchParallel([url1, url2, ...]);
 ```
 
 ---
@@ -87,7 +87,7 @@ const isOnline = useNetworkStatus();
 Adds undo/redo functionality for state management.
 
 ```tsx
-const { state, set, undo, redo } = useUndoRedo(initialState);
+const { state, set, undo, redo, canUndo, canRedo } = useUndoRedo(initialState);
 ```
 
 ---
@@ -105,8 +105,7 @@ const { queue, enqueue, dequeue } = useQueue();
 Dynamically updates CSS variables.
 
 ```tsx
-const { setVariable } = useCSSVariables();
-setVariable("--main-color", "red");
+useCSSVariables({"--main-color": "red", ...});
 ```
 
 ---
@@ -124,8 +123,8 @@ const { data, loading, error } = useGetRequest(url);
 Performs a POST request.
 
 ```tsx
-const { data, postData, loading, error } = usePostRequest(url);
-postData(payload);
+const { data, postRequest, loading, error } = usePostRequest(url);
+postRequest(payload);
 ```
 
 ---
@@ -134,8 +133,8 @@ postData(payload);
 Performs a PUT request.
 
 ```tsx
-const { data, putData, loading, error } = usePutRequest(url);
-putData(payload);
+const { data, putRequest, loading, error } = usePutRequest(url);
+putRequest(payload);
 ```
 
 ---
@@ -144,8 +143,8 @@ putData(payload);
 Performs a DELETE request.
 
 ```tsx
-const { data, deleteData, loading, error } = useDeleteRequest(url);
-deleteData();
+const { data, deleteRequest, loading, error } = useDeleteRequest(url);
+deleteRequest();
 ```
 
 ---
