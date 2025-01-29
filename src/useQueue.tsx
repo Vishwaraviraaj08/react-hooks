@@ -6,5 +6,5 @@ export function useQueue<T>(initialQueue: T[] = []) {
     const enqueue = (item: T) => setQueue((prev: any) => [...prev, item]);
     const dequeue = () => setQueue((prev) => prev.slice(1));
 
-    return { queue, enqueue, dequeue, front: queue[0] };
+    return { queue, enqueue, dequeue };
 }
